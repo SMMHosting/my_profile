@@ -9,33 +9,96 @@
 body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
+  background-color: rgb(209, 209, 209);
 }
 
 /* NavBar  */
 .top_section {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding: 1em;
+  background-color: rgb(198, 198, 198);
+  box-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.227);
+  flex-wrap: wrap;
 }
+/* Logo */
+.logo {
+  font-style: italic;
+}
+/* End of Logo */
+
+/* Mobile NavBar */
+.mobile_nav_bar {
+  display: none;
+}
+/* End of Mobile NavBar */
 
 nav ul {
   display: flex;
-  background-color: aqua;
+  background-color: rgb(0, 140, 255);
   padding: 0.5em 1em;
   border-radius: 0.5em;
   width: 100%;
   margin: 0 auto;
+  box-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.15);
 }
 
 nav li {
   margin-right: 1em;
   list-style: none;
+  background-color: inherit;
 }
 
 nav a {
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 0.8rem;
+  background-color: inherit;
+  font-weight: 600;
+  transition: all 0.5s ease;
 }
-/* End NavBar */
+nav a:hover {
+  color: rgba(116, 116, 116, 0.441);
+  text-decoration: underline;
+  font-size: 0.7rem;
+}
+nav a:active {
+  text-decoration: underline;
+}
+/* NavBar Media Query */
+
+@media screen and (max-width: 600px) {
+  .mobile_nav_bar {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background-color: rgb(209, 209, 209);
+    padding: 0.4em;
+    border-radius: 0.2em;
+    width: 10%;
+    border: 1px solid #fff;
+    margin-bottom: 0.5em;
+  }
+
+  .logo {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+
+  nav .active {
+    display: flex;
+    width: 100%;
+    margin-left: 20em;
+    border-radius: 0.5em 0.5em 0 0;
+    flex-direction: column;
+    background-color: rgb(0, 140, 255);
+    transition: all 0.8s ease-in;
+  }
+
+  nav li {
+    margin-bottom: 1em;
+  }
+} /* End NavBar */
+
+/* Hero Start */
