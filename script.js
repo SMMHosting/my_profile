@@ -5,13 +5,15 @@ const mobileNavBar = document.querySelector(".mobile_nav_bar");
 
 // Mobile Nav Ul Link
 
-const mobileNavUl = document.querySelector("nav");
+const DesktopNavBar = document.querySelector("nav");
 
 // Mobile Nav Click Function
-const mobileNavClick = () => {
+
+const mobileNavBarOpen = () => {
   mobileNavBar.addEventListener("click", () => {
-    mobileNavUl.classList.remove("active");
-    console.log(" clicked");
+    console.log("Clicked");
+    mobileNavBar.classList.toggle("active");
   });
 };
-mobileNavClick();
+
+mobileNavBarOpen();
